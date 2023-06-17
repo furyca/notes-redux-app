@@ -1,0 +1,77 @@
+//Light Theme Colors
+$lightTheme-TextColor: black;
+$lightTheme-BGColor: #C4DFDF;
+$lightTheme-BottomShadowColor: #758b8b;
+$lightTheme-TopShadowColor: #dbdbdb;
+$lightTheme-HoverBGColor: #a9caca;
+
+//Dark Theme Colors
+$darkTheme-TextColor: white;
+$darkTheme-BGColor: #576666;
+$darkTheme-BottomShadowColor: #222828;
+$darkTheme-TopShadowColor: #424242;
+$darkTheme-HoverBGColor: #627474;
+
+//Common Values
+$common-TopShadow: 5px 5px 10px;
+$common-BottomShadow: -5px -5px 10px;
+
+
+.sideMenu {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+
+  a {
+    text-align: center;
+  }
+}
+
+.buttonLight, .buttonDark {
+  width: 90%;
+  padding: 15px;
+  margin: 10px auto;
+  border-radius: 15px;
+  cursor: pointer;
+
+  &:hover {
+    scale: .95;
+  }
+}
+
+.buttonLight {
+  color: $lightTheme-TextColor;
+  background-color: $lightTheme-BGColor;
+  box-shadow: $common-TopShadow $lightTheme-BottomShadowColor, $common-BottomShadow $lightTheme-TopShadowColor;
+
+  &:hover {
+    background-color: $lightTheme-HoverBGColor;
+  }
+}
+
+.buttonDark {
+  color: $darkTheme-TextColor;
+  background-color: $darkTheme-BGColor;
+  box-shadow: $common-TopShadow $darkTheme-BottomShadowColor, $common-BottomShadow $darkTheme-TopShadowColor;
+
+  &:hover {
+    background-color: $darkTheme-HoverBGColor;
+  }
+}
+
+@media (max-width: 800px) {
+  .sideMenu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 10px;
+    z-index: 10;
+    background-color: #3c3c3c;
+    box-shadow: 0 -5px 5px #3c3c3c;
+  }
+  
+}

@@ -1,0 +1,37 @@
+[
+    {
+        "id": "1",
+        "title": "Note 1",
+        "content": "This is the first note",
+        "textColor": "white",
+        "color": "#ea3a3a"
+    },
+    {
+        "id": "2",
+        "title": "Note 2",
+        "content": "This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note This is the second note",
+        "textColor": "white",
+        "color": "#4f80da"
+    },
+    {
+        "id": "3",
+        "title": "Note 3",
+        "content": "This is the third note",
+        "textColor": "white",
+        "color": "#c502c5"
+    },
+    {
+        "id": "4",
+        "title": "Note 4",
+        "content": "This is the fourth note",
+        "textColor": "white",
+        "color": "#cbe557"
+    },
+    {
+        "id": "5",
+        "title": "Note 5",
+        "content": "This is the fifth note",
+        "textColor": "white",
+        "color": "#4fda4f"
+    }
+]

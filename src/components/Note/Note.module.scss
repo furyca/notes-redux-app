@@ -1,0 +1,59 @@
+.note {
+  text-align: center;
+  list-style:none;
+  width: 180px;
+  height: 180px;
+  padding-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 5px 5px 7px #212121b3;
+
+  &:hover {
+    box-shadow:10px 10px 7px #000000b3;
+    transform: scale(1.2);
+    z-index: 1;
+  }
+}
+
+.textClamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 15px;
+}
+
+.deleteButton {
+  top: -5%;
+  right: -5%;
+  position: absolute;
+  background-color: red;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px black;
+
+  &:hover {
+    background-color: #7b0000;
+  }
+}
+
+.link{
+  text-decoration: none;
+  margin: 15px;
+
+  &:nth-child(even) {
+    transform: rotate(-6deg);
+  }
+  
+  &:nth-child(odd) {
+    transform: rotate(6deg);
+  }
+
+  &:hover {
+    transform: rotate(0deg);
+  }
+}

@@ -1,0 +1,109 @@
+//Light Theme Colors
+$light-ContainerBG: #E3F4F4;
+
+//Light Theme Shadows
+$light-ContainerShadow: 50px 50px 100px #728799, -50px -50px 100px #dbdbdb;
+
+//Dark Theme Colors
+$dark-ContainerBG: #353a3a;
+
+//Dark Theme Shadows
+$dark-ContainerShadow: 50px 50px 100px #161616, -50px -50px 100px #3c3c3c;
+
+//Common Shadows
+//$common-AddButtonShadow: 0 0 5px #656565;
+
+
+
+.outerContainer, .outerContainerDark {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.outerContainer {
+  background: $light-ContainerBG;
+  box-shadow:  $light-ContainerShadow;
+}
+
+.outerContainerDark {
+  background: $dark-ContainerBG;
+  box-shadow: $dark-ContainerShadow;
+}
+
+.container {
+  width: 75%;
+  padding: 20px;
+}
+
+aside {
+  width: 25%;
+}
+
+
+//Layout
+
+$backgroundColor: #D2E9E9;
+$darkColor: #323636;
+$lineHeight: 1.5;
+$font: Verdana, Geneva, Tahoma, sans-serif;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body, .darkBody {
+  line-height: $lineHeight;
+  -webkit-font-smoothing: antialiased;
+  font-family: $font;
+}
+
+body {
+  background: $backgroundColor;
+}
+
+.darkBody {
+  background: $darkColor;
+  min-height: 100vh;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 800px) {
+  aside {
+    width: 0;
+  }
+  .outerContainer, .outerContainerDark {
+    width: 100%;
+    padding: 0;
+  }
+  .container {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0;
+    border-radius: 20px;
+  }
+}

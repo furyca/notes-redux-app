@@ -1,0 +1,16 @@
+.notes {
+  padding: 15px 25px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-height: 65vh;
+  overflow: auto;
+}
+
+@media (max-width: 320px) {
+  .notes {
+    padding-bottom: 140px;
+  }
+    
+}

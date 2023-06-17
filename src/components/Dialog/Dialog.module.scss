@@ -1,0 +1,91 @@
+//Light Theme Colors
+$light-outerBGColor: #ffffff86;
+$light-innerBGColor: whitesmoke;
+
+//Dark Theme Color
+$dark-outerBGColor: #00000086;
+$dark-innerBGColor: #b9b9b9;
+
+.dialog, .dialogDark {
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h3, p {
+    align-self: flex-start;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    border-bottom: 1px solid black;
+    width: 100%;
+  }
+}
+
+.dialog {
+  background-color: $light-outerBGColor;
+}
+.dialogDark {
+  background-color: $dark-outerBGColor;
+}
+
+.innerDialog {
+  background-color: $light-innerBGColor;
+}
+
+.innerDialogDark {
+  background-color: $dark-innerBGColor;
+}
+
+.innerDialog, .innerDialogDark {
+  padding: 30px 30px;
+  width: 40%;
+  min-height: 200px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid black;
+}
+
+.buttons {
+  display: flex;
+  align-self: end;
+}
+
+.option {
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+
+  &:hover {
+    background-color: gray;
+  }
+
+  &:last-child {
+    margin-left: 10px;
+    background-color: navy;
+    color: whitesmoke;
+  }
+
+  &:last-child:hover {
+    background-color: darkslateblue;
+  }
+}
+
+@media (max-width: 800px) {
+  .innerDialog, .innerDialogDark {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 20px;
+  }
+}

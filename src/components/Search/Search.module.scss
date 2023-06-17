@@ -1,0 +1,39 @@
+//Light Theme Colors
+$lightTheme-ShadowColor: #656565;
+
+//Light Theme Values
+$lightTheme-BottomShadow: 0 0 5px;
+
+//Dark Theme Colors
+$darkTheme-BGColor: #dedede;
+
+.search {
+  text-align: center;
+}
+
+.lightInput, .darkInput {
+  border: none;
+  text-align: center;
+  height: 40px;
+  width: 80%;
+  border-radius: 20px;
+  
+  &:hover {
+    outline:auto;
+  }
+}
+
+.lightInput {
+  box-shadow: $lightTheme-BottomShadow $lightTheme-ShadowColor;
+}
+
+.darkInput {
+  background-color: $darkTheme-BGColor;
+}
+
+@media (max-width: 800px) {
+  .search {
+    padding-top: 20px;
+  }
+  
+}

@@ -1,0 +1,137 @@
+//Light Theme Colors
+$light-AddButtonBGColor: darkcyan;
+$light-AddButtonTextColor: white;
+$light-TextColor: #687484;
+
+//Light Theme Shadows
+$light-TextShadow: 2px 2px 2px #abb8c8;
+
+//Dark Theme Colors
+$dark-InputColor: #dedede;
+$dark-AddButtonBGColor: #007171;
+$dark-AddButtonTextColor: #dfdfdf;
+$dark-TextColor: #afb6be;
+
+//Dark Theme Shadows
+$dark-TextShadow: 2px 2px 2px #15171a;
+
+//Common Shadows
+$common-AddButtonShadow: 0 0 5px #656565;
+
+
+.createNote {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.title, .titleDark {
+  resize: none;
+  height: 40px;
+  width: 70%;
+  border-radius: 15px;
+  padding: 10px;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.titleDark, .descDark {
+  background-color: $dark-InputColor;
+}
+
+.desc, .descDark {
+  resize: none;
+  height: 200px;
+  width: 100%;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.addButton, .addButtonDark {
+  width: 200px;
+  height: 60px;
+  margin: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: $common-AddButtonShadow;
+
+
+  &:disabled {
+    background-color: #565656;
+    box-shadow: none;
+  }
+}
+
+.addButton {
+  background-color: $light-AddButtonBGColor;
+  color: $light-AddButtonTextColor;
+
+  &:hover:enabled{
+    background-color: black;
+  }
+}
+
+.addButtonDark {
+  background-color: $dark-AddButtonBGColor;
+  color: $dark-AddButtonTextColor;
+
+  &:hover:enabled{
+    background-color: #3d3d3d;
+  }
+}
+
+.pLight, .pDark {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.pLight {
+  color: $light-TextColor;
+  text-shadow: $light-TextShadow;
+}
+
+.pDark {
+  color: $dark-TextColor;
+  text-shadow: $dark-TextShadow;
+}
+
+.colorButton {
+  color: white;
+  margin: 20px 0;
+  width: 160px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px #000000;
+  text-shadow: 2px 2px 2px #000000, -1px -1px 5px #000000;
+}
+
+.colorDivision {
+  width: 50%;
+}
+
+.colorsContainer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .createNote {
+    padding: 20px 0 140px;
+  }
+  .colorsContainer{
+    flex-direction: column;
+    justify-content: center;
+  }  
+  .colorDivision {
+    width: 100%;
+  }
+}

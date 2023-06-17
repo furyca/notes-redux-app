@@ -1,0 +1,60 @@
+//Light Theme Colors
+$lightTheme-TextColor: #687484;
+$lightTheme-TextBottomShadowColor: #abb8c8;;
+
+//Dark Theme Colors
+$darkTheme-TextColor: #afb6be;
+$darkTheme-TextBottomShadowColor: #15171a;
+
+//Common Colors
+$common-BottomShadowColor: #212121b3;
+
+//Common Values
+$common-BottomContainerShadow: 5px 5px 7px;
+$common-BottomTextShadow: 2px 2px 2px;
+
+
+.preview {
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  padding-top: 10px;
+  border-radius: 5px;
+  box-shadow: $common-BottomContainerShadow $common-BottomShadowColor;
+}
+
+.prevTitle {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 10px 25px;
+}
+
+.prevClamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+.workspace {
+  display: flex;
+  justify-content: center;
+}
+
+.pLight,
+.pDark {
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+.pLight {
+  color: $lightTheme-TextColor;
+  text-shadow: $common-BottomTextShadow $lightTheme-TextBottomShadowColor;
+}
+
+.pDark {
+  color: $darkTheme-TextColor;
+  text-shadow: $common-BottomTextShadow $darkTheme-TextBottomShadowColor;
+}

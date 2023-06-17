@@ -1,0 +1,76 @@
+$color: #687484;
+$darkColor: #d3d3d3;
+$font-size: 2rem;
+$nightIconColor: #010716;
+$dayIconColor: #dadd15;
+
+//Common Text Shadow Values
+$common-NegativeTextShadowValue: -1px -1px 3px;
+$common-PositiveTextShadowValue: 1px 1px 3px;
+
+//Light Theme
+$light-NegativeTextShadowColor: #867299;
+$light-PositiveTextShadowColor: #dbdbdb;
+
+//Dark Theme
+$dark-NegativeTextShadowColor: #728099;
+$dark-PositiveTextShadowColor: #a6a6a6;
+
+header {
+  padding: 15px;
+  width: 80%;
+  margin: 0 auto 10px;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    cursor: pointer;
+    border: none;
+    background-color: #ffffff00;
+    border-radius: 20px;
+
+    &:hover {
+      background-color: #ffffff60;
+    }
+  }
+}
+
+.headerText {
+  color: $color;
+  font-size: $font-size;    
+  text-shadow: $common-NegativeTextShadowValue $light-NegativeTextShadowColor, $common-PositiveTextShadowValue $light-PositiveTextShadowColor;
+}
+
+.headerTextDark {
+  color: $darkColor;
+  text-shadow: $common-NegativeTextShadowValue $dark-NegativeTextShadowColor, $common-PositiveTextShadowValue $dark-PositiveTextShadowColor;
+}
+
+.dayIcon, .nightIcon {
+  height: 30px;
+  padding: 10px;
+}
+
+.dayIcon {
+  color: $dayIconColor;
+}
+
+.nightIcon {
+  color: $nightIconColor;
+}
+
+@media (max-width: 320px) {
+  .headerText, .headerTextDark {
+    font-size: 1.5rem;  
+  }
+  header {
+    padding: 20px 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .dayIcon, .nightIcon {
+    height: 24px;
+    padding: 10px;
+  }
+  
+}
