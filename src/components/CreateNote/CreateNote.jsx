@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addNote } from "../../redux/slice";
+import { toggleAddConfirm } from "../../redux/slice";
 import style from "./CreateNote.module.scss";
-import { nanoid } from "@reduxjs/toolkit";
 import { ColorPicker, useColor } from "react-color-palette";
 import "react-color-palette/lib/css/styles.css";
 import Preview from "../Preview/Preview";
+import Dialog from "../Dialog/Dialog";
 
 const CreateNote = () => {
   const [title, setTitle] = useState("");
@@ -17,7 +17,7 @@ const CreateNote = () => {
   const [color, setColor] = useColor("hex", "#fff");
   const [textColor, setTextColor] = useColor("hex", "#000");
 
-  const { theme } = useSelector((state) => state.slice);
+  const { theme, confirmAdd } = useSelector((state) => state.slice);
 
   const dispatch = useDispatch();
 
@@ -30,20 +30,7 @@ const CreateNote = () => {
   }, [title, content, canAdd]);
 
   const handleAdd = () => {
-    let text = `Add Note: ${title}?`;
-
-    if (window.confirm(text)) {
-      dispatch(
-        addNote({
-          id: nanoid(),
-          title,
-          content,
-          textColor: textColor.hex,
-          color: color.hex,
-        })
-      );
-    }
-    return;
+    dispatch(toggleAddConfirm(true))
   };
 
   return (
@@ -70,6 +57,14 @@ const CreateNote = () => {
         />
       </div>
 
+      <button
+        className={theme === "dark" ? style.addButtonDark : style.addButton}
+        onClick={handleAdd}
+        disabled={!canAdd}
+      >
+        Add
+      </button>
+      
       <div className={style.colorsContainer}>
         <div className={`${style.colorDivision} ${style.flexColumnCenter}`}>
           <button
@@ -118,13 +113,7 @@ const CreateNote = () => {
         </div>
       </div>
 
-      <button
-        className={theme === "dark" ? style.addButtonDark : style.addButton}
-        onClick={handleAdd}
-        disabled={!canAdd}
-      >
-        Add
-      </button>
+      
 
       <Preview
         color={color}
@@ -132,6 +121,8 @@ const CreateNote = () => {
         title={title}
         content={content}
       />
+
+      {confirmAdd && <Dialog title={title} content={content} textColor={textColor.hex} color={color.hex} type='add'/>}
     </div>
   );
 };

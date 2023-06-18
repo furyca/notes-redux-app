@@ -2,7 +2,7 @@ import style from "./Note.module.scss";
 import { Link } from "react-router-dom";
 import Dialog from "../Dialog/Dialog";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleConfirm } from "../../redux/slice";
+import { toggleDeleteConfirm } from "../../redux/slice";
 
 const Note = ({ title, color, content, textColor, id }) => {
   const confirmId = useSelector(state => state.slice.confirmId)
@@ -12,7 +12,7 @@ const Note = ({ title, color, content, textColor, id }) => {
     e.stopPropagation();
     e.preventDefault();
 
-    dispatch(toggleConfirm(id))
+    dispatch(toggleDeleteConfirm(id))
   };
 
   return (
@@ -28,7 +28,7 @@ const Note = ({ title, color, content, textColor, id }) => {
         </p>
       </li>
     </Link>
-    {confirmId === id && <Dialog title={title} content={content}  id={id}/>}
+    {confirmId === id && <Dialog title={title} content={content}  id={id} type='delete'/>}
     </>
   );
 };

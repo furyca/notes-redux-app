@@ -9,6 +9,7 @@ export const slice = createSlice({
     theme: localStorage.getItem('theme'),
     searchInput: "",
     confirmId: 0,
+    confirmAdd: false,
   },
   reducers: {
     pickColor: (state, action) => {
@@ -27,11 +28,14 @@ export const slice = createSlice({
     updateSearchInput: (state, action) => {
       state.searchInput = action.payload;
     },
-    toggleConfirm: (state, action) => {
+    toggleDeleteConfirm: (state, action) => {
       state.confirmId = action.payload
+    },
+    toggleAddConfirm: (state, action) => {
+      state.confirmAdd = action.payload;
     },
   },
 });
 
-export const { pickColor, addNote, changeTheme, updateSearchInput, deleteNote, toggleConfirm } = slice.actions;
+export const { pickColor, addNote, changeTheme, updateSearchInput, deleteNote, toggleDeleteConfirm, toggleAddConfirm } = slice.actions;
 export default slice.reducer;

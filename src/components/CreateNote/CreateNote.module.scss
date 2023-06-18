@@ -22,6 +22,8 @@ $common-AddButtonShadow: 0 0 5px #656565;
 .createNote {
   margin-top: 10px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .title, .titleDark {
@@ -55,6 +57,7 @@ $common-AddButtonShadow: 0 0 5px #656565;
   border-radius: 10px;
   cursor: pointer;
   box-shadow: $common-AddButtonShadow;
+  align-self: center;
 
 
   &:disabled {

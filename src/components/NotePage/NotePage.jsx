@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useParams } from "react-router-dom";
 import style from "./NotePage.module.scss";
-import { toggleConfirm } from "../../redux/slice";
+import { toggleDeleteConfirm } from "../../redux/slice";
 import Dialog from "../Dialog/Dialog";
 
 const NotePage = () => {
@@ -13,7 +13,7 @@ const NotePage = () => {
   const note = noteList.find((note) => note.id === params.id);
 
   const handleDelete = () => {
-    dispatch(toggleConfirm(note.id))
+    dispatch(toggleDeleteConfirm(note.id))
   };
 
   return (
@@ -32,7 +32,7 @@ const NotePage = () => {
     </div> 
     : 
     <Navigate to="/" />}
-    {note && confirmId === note.id && <Dialog title={note.title} content={note.content} id={note.id}/>}
+    {note && confirmId === note.id && <Dialog title={note.title} content={note.content} id={note.id} type='delete' />}
 
     </>
   );

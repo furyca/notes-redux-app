@@ -59,7 +59,7 @@ header {
   color: $nightIconColor;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 768px) {
   .headerText, .headerTextDark {
     font-size: 1.5rem;  
   }
