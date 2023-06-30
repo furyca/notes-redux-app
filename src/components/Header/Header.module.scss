@@ -1,19 +1,16 @@
-$color: #687484;
+$color: #21262d;
 $darkColor: #d3d3d3;
 $font-size: 2rem;
 $nightIconColor: #010716;
 $dayIconColor: #dadd15;
 
 //Common Text Shadow Values
-$common-NegativeTextShadowValue: -1px -1px 3px;
-$common-PositiveTextShadowValue: 1px 1px 3px;
+$common-PositiveTextShadowValue: 1px 1px 1px;
 
 //Light Theme
-$light-NegativeTextShadowColor: #867299;
-$light-PositiveTextShadowColor: #dbdbdb;
+$light-PositiveTextShadowColor: #464646;
 
 //Dark Theme
-$dark-NegativeTextShadowColor: #728099;
 $dark-PositiveTextShadowColor: #a6a6a6;
 
 header {
@@ -38,12 +35,12 @@ header {
 .headerText {
   color: $color;
   font-size: $font-size;    
-  text-shadow: $common-NegativeTextShadowValue $light-NegativeTextShadowColor, $common-PositiveTextShadowValue $light-PositiveTextShadowColor;
+  text-shadow: $common-PositiveTextShadowValue $light-PositiveTextShadowColor;
 }
 
 .headerTextDark {
   color: $darkColor;
-  text-shadow: $common-NegativeTextShadowValue $dark-NegativeTextShadowColor, $common-PositiveTextShadowValue $dark-PositiveTextShadowColor;
+  text-shadow: $common-PositiveTextShadowValue $dark-PositiveTextShadowColor;
 }
 
 .dayIcon, .nightIcon {

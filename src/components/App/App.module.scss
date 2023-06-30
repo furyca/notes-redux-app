@@ -1,18 +1,14 @@
 //Light Theme Colors
-$light-ContainerBG: #E3F4F4;
+$light-ContainerBG: #a5daf9;
 
 //Light Theme Shadows
-$light-ContainerShadow: 50px 50px 100px #728799, -50px -50px 100px #dbdbdb;
+$light-ContainerShadow: 10px 10px 20px #728799;
 
 //Dark Theme Colors
 $dark-ContainerBG: #353a3a;
 
 //Dark Theme Shadows
 $dark-ContainerShadow: 50px 50px 100px #161616, -50px -50px 100px #3c3c3c;
-
-//Common Shadows
-//$common-AddButtonShadow: 0 0 5px #656565;
-
 
 
 .outerContainer, .outerContainerDark {
@@ -36,17 +32,15 @@ $dark-ContainerShadow: 50px 50px 100px #161616, -50px -50px 100px #3c3c3c;
 
 .container {
   width: 75%;
-  padding: 20px;
 }
 
 aside {
   width: 25%;
 }
 
-
 //Layout
 
-$backgroundColor: #D2E9E9;
+$backgroundColor: #19b2d2;
 $darkColor: #323636;
 $lineHeight: 1.5;
 $font: Verdana, Geneva, Tahoma, sans-serif;
@@ -97,13 +91,11 @@ p, h1, h2, h3, h4, h5, h6 {
     width: 0;
   }
   .outerContainer, .outerContainerDark {
-    width: 100%;
-    padding: 0;
+    width: 95%;
+    padding: 10px;
+    border-radius: 5px;
   }
   .container {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0);
-    padding: 0;
-    border-radius: 20px;
   }
 }

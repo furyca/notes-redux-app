@@ -31,7 +31,7 @@ const CreateNote = () => {
 
   const handleAdd = () => {
     dispatch(toggleAddConfirm(true))
-  };
+  }
 
   return (
     <div className={style.createNote}>
@@ -66,7 +66,7 @@ const CreateNote = () => {
       </button>
       
       <div className={style.colorsContainer}>
-        <div className={`${style.colorDivision} ${style.flexColumnCenter}`}>
+        <div className={`${style.colorDivision} ${style.flexColumnCenter}`} >
           <button
             className={style.colorButton}
             style={{ backgroundColor: textColor.hex }}
@@ -75,18 +75,17 @@ const CreateNote = () => {
             Set Text Color
           </button>
           {textPalette && (
-            <div>
-              <ColorPicker
-                width={320}
-                height={200}
-                color={textColor}
-                onChange={setTextColor}
-                hideHSV
-                hideRGB
-                dark
-              />
-            </div>
-          )}
+            <ColorPicker
+              width={300}
+              height={200}
+              color={textColor}
+              onChange={setTextColor}
+              hideHSV
+              hideRGB
+              dark
+            />
+          )
+          }
         </div>
 
         <div className={`${style.colorDivision} ${style.flexColumnCenter}`}>
@@ -98,9 +97,8 @@ const CreateNote = () => {
             Set Main Color
           </button>
           {mainPalette && (
-            <div>
               <ColorPicker
-                width={320}
+                width={300}
                 height={200}
                 color={color}
                 onChange={setColor}
@@ -108,12 +106,9 @@ const CreateNote = () => {
                 hideRGB
                 dark
               />
-            </div>
           )}
         </div>
       </div>
-
-      
 
       <Preview
         color={color}
@@ -126,4 +121,5 @@ const CreateNote = () => {
     </div>
   );
 };
+
 export default CreateNote;

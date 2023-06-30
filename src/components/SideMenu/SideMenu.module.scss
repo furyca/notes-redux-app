@@ -2,7 +2,6 @@
 $lightTheme-TextColor: black;
 $lightTheme-BGColor: #C4DFDF;
 $lightTheme-BottomShadowColor: #758b8b;
-$lightTheme-TopShadowColor: #dbdbdb;
 $lightTheme-HoverBGColor: #a9caca;
 
 //Dark Theme Colors
@@ -14,8 +13,6 @@ $darkTheme-HoverBGColor: #627474;
 
 //Common Values
 $common-TopShadow: 5px 5px 10px;
-$common-BottomShadow: -5px -5px 10px;
-
 
 .sideMenu {
   display: flex;
@@ -31,7 +28,8 @@ $common-BottomShadow: -5px -5px 10px;
   width: 90%;
   padding: 15px;
   margin: 10px auto;
-  border-radius: 15px;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
 
   &:hover {
@@ -42,7 +40,7 @@ $common-BottomShadow: -5px -5px 10px;
 .buttonLight {
   color: $lightTheme-TextColor;
   background-color: $lightTheme-BGColor;
-  box-shadow: $common-TopShadow $lightTheme-BottomShadowColor, $common-BottomShadow $lightTheme-TopShadowColor;
+  box-shadow: $common-TopShadow $lightTheme-BottomShadowColor;
 
   &:hover {
     background-color: $lightTheme-HoverBGColor;
@@ -52,7 +50,7 @@ $common-BottomShadow: -5px -5px 10px;
 .buttonDark {
   color: $darkTheme-TextColor;
   background-color: $darkTheme-BGColor;
-  box-shadow: $common-TopShadow $darkTheme-BottomShadowColor, $common-BottomShadow $darkTheme-TopShadowColor;
+  box-shadow: $common-TopShadow $darkTheme-BottomShadowColor;
 
   &:hover {
     background-color: $darkTheme-HoverBGColor;
@@ -70,8 +68,12 @@ $common-BottomShadow: -5px -5px 10px;
     justify-content: space-around;
     padding-top: 10px;
     z-index: 10;
+    border: 1px solid black;
     background-color: #3c3c3c;
-    box-shadow: 0 -5px 5px #3c3c3c;
+  }
+
+  .buttonLight {
+    box-shadow: none;
   }
   
 }
