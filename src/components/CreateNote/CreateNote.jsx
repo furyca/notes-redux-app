@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleAddConfirm } from "../../redux/slice";
 import style from "./CreateNote.module.scss";
@@ -14,12 +14,14 @@ const CreateNote = () => {
   const [textPalette, setTextPalette] = useState(false);
   const [mainPalette, setMainPalette] = useState(false);
 
+  const divisionRef = useRef()
+
   const [color, setColor] = useColor("hex", "#fff");
   const [textColor, setTextColor] = useColor("hex", "#000");
 
   const { theme, confirmAdd } = useSelector((state) => state.slice);
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch();  
 
   useEffect(() => {
     if (title.length > 0 && content.length > 0) {
@@ -66,7 +68,7 @@ const CreateNote = () => {
       </button>
       
       <div className={style.colorsContainer}>
-        <div className={`${style.colorDivision} ${style.flexColumnCenter}`} >
+        <div className={`${style.colorDivision} ${style.flexColumnCenter}`} ref={divisionRef}>
           <button
             className={style.colorButton}
             style={{ backgroundColor: textColor.hex }}
@@ -76,7 +78,7 @@ const CreateNote = () => {
           </button>
           {textPalette && (
             <ColorPicker
-              width={300}
+              width={divisionRef.current.clientWidth-10}
               height={200}
               color={textColor}
               onChange={setTextColor}
@@ -98,7 +100,7 @@ const CreateNote = () => {
           </button>
           {mainPalette && (
               <ColorPicker
-                width={300}
+                width={divisionRef.current.clientWidth-10}
                 height={200}
                 color={color}
                 onChange={setColor}
